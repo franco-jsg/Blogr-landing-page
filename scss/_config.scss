@@ -1,0 +1,56 @@
+//VARIABLES
+
+$primary-light-red: hsl(356, 100%, 66%);
+$primary-very-light-red: hsl(355, 100%, 74%);
+$primary-very-dark-blue: hsl(208, 49%, 24%);
+
+$neutral-white: hsl(0, 0%, 100%);
+$neutral-greyish-blue: hsl(240, 2%, 79%);
+$neutral-very-dark-greyish-blue: hsl(207, 13%, 34%);
+$neutral-very-dark-black-blue: hsl(240, 10%, 16%);
+
+$gradient-very-light-red: hsl(13, 100%, 72%);
+$gradient-light-red: hsl(353, 100%, 62%);
+
+$gradient-very-dark-gray-blue: hsl(237, 17%, 21%);
+$gradient-very-dark-desatured-blue: hsl(237, 17%, 21%);
+
+:root {
+  --fs-h1: 2.1rem;
+  --fs-h2: 2.1rem;
+  --fs-h3: 1.8rem;
+  --fs-header: 1.2rem;
+  --fs-p: 1rem;
+  --fs-footer: 1rem;
+  --fs-button: 1rem;
+
+  --padding-sides: 0 15% 0 15%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 62.5%;
+}
+
+@mixin media-lg {
+  @media screen and (min-width: 1200px) {
+    :root {
+      --fs-h1: 4rem;
+      --fs-h2: 2.5rem;
+      --fs-h3: 2rem;
+      --fs-header: 1.8rem;
+      --fs-p: 1.1rem;
+      --fs-footer: 1.5rem;
+      --fs-button: 1.2rem;
+
+      --pad-sides: 0 15% 0 15%;
+    }
+
+    @content;
+  }
+}
